@@ -1,0 +1,7 @@
+interface:
+  display_name: "Flutter Clean Architecture Architect"
+  short_description: "Design and refactor Flutter feature architecture"
+  default_prompt: "Use $flutter-clean-arch-architect to design or refactor a Flutter feature with strict domain, infrastructure, and presentation boundaries."
+
+policy:
+  allow_implicit_invocation: true

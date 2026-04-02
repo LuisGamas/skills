@@ -1,0 +1,7 @@
+interface:
+  display_name: "Flutter Riverpod Expert"
+  short_description: "Design and migrate Riverpod state"
+  default_prompt: "Use $flutter-riverpod-expert to design, migrate, or review this Flutter state management code with modern Riverpod patterns."
+
+policy:
+  allow_implicit_invocation: true

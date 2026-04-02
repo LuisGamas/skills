@@ -1,0 +1,7 @@
+interface:
+  display_name: "Odoo Modules Creator"
+  short_description: "Create installable Odoo 18 addons"
+  default_prompt: "Use $odoo-modules-creator to create or extend an Odoo 18 addon with proper manifests, models, security, views, and business logic."
+
+policy:
+  allow_implicit_invocation: true

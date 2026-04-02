@@ -1,0 +1,7 @@
+interface:
+  display_name: "Flutter Init Project"
+  short_description: "Bootstrap a Flutter app foundation"
+  default_prompt: "Use $flutter-init-project to convert this Flutter app into a Clean Architecture baseline with manual Riverpod, GoRouter, and Material 3 tokens."
+
+policy:
+  allow_implicit_invocation: true

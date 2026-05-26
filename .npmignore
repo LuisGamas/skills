@@ -1,0 +1,26 @@
+# Development files
+.git
+.gitignore
+.github
+.vscode
+.idea
+*.log
+.DS_Store
+Thumbs.db
+
+# Documentation (not needed in package)
+AGENTS.md
+
+# Test files
+test
+tests
+__tests__
+*.test.js
+*.spec.js
+
+# Config files not needed at runtime
+.editorconfig
+.eslintrc*
+.prettierrc*
+tsconfig.json
+jsconfig.json

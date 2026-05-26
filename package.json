@@ -1,0 +1,44 @@
+{
+  "name": "opencode-skills-flutter-odoo",
+  "version": "1.0.0",
+  "description": "Installable OpenCode skills for Flutter (Clean Architecture, Riverpod, Material 3, Project Init) and Odoo 18 module creation",
+  "main": "index.js",
+  "bin": {
+    "opencode-skills-install": "./scripts/install.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "install:global": "node scripts/install.js --global",
+    "install:local": "node scripts/install.js --local"
+  },
+  "files": [
+    "flutter-clean-arch-architect/",
+    "flutter-init-project/",
+    "flutter-material3-uiux-expert/",
+    "flutter-riverpod-expert/",
+    "odoo-modules-creator/",
+    "scripts/",
+    "index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "opencode",
+    "skills",
+    "flutter",
+    "riverpod",
+    "material-design-3",
+    "odoo",
+    "clean-architecture",
+    "ai-agent"
+  ],
+  "author": "Luis Gamas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGamas/skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuisGamas/skills/issues"
+  },
+  "homepage": "https://github.com/LuisGamas/skills#readme"
+}

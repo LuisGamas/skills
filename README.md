@@ -1,87 +1,181 @@
-# Custom Codex Skills
+# OpenCode Skills: Flutter & Odoo
 
-This repository contains a curated set of custom Codex skills designed around my own working preferences, architectural standards, and implementation ideals.
+Installable OpenCode skills for Flutter (Clean Architecture, Riverpod, Material 3, Project Init) and Odoo 18 module creation.
 
-These skills are not generic prompt snippets. Each one is structured as a reusable skill with:
+## Installation
 
-- a focused `SKILL.md`
-- machine-readable UI metadata in `agents/openai.yaml`
-- domain references in `references/`
-- reusable assets when applicable in `assets/`
-- helper scripts when automation or auditing is useful in `scripts/`
+### Global Installation (Recommended)
+
+Install once and use across all projects:
+
+```bash
+npm install -g opencode-skills-flutter-odoo
+```
+
+Skills are automatically installed to your global OpenCode skills directory.
+
+### Symlink Installation
+
+Use symlinks so updates to the package reflect immediately without reinstalling:
+
+```bash
+# Linux/macOS
+OPENCODE_SKILLS_SYMLINK=1 npm install -g opencode-skills-flutter-odoo
+
+# Windows (PowerShell)
+$env:OPENCODE_SKILLS_SYMLINK="1"; npm install -g opencode-skills-flutter-odoo
+```
+
+> **Note:** Windows symlinks require administrator privileges or Developer Mode enabled. If symlinks fail, the installer falls back to copying.
+
+### Project-Local Installation
+
+Install skills for a specific project only:
+
+```bash
+npm install --save-dev opencode-skills-flutter-odoo
+```
+
+## Manual Installation
+
+For more control over where skills are installed:
+
+```bash
+# Global (OpenCode only)
+npx opencode-skills-install --global
+
+# Global with symlinks
+npx opencode-skills-install --global --symlink
+
+# Local project (OpenCode only)
+npx opencode-skills-install --local
+
+# Install to all detected agent directories
+npx opencode-skills-install --all
+
+# Install to specific agents
+npx opencode-skills-install --global --agents opencode,claude
+
+# Install locally to multiple agents
+npx opencode-skills-install --local --agents opencode,claude,agents
+```
+
+## Multi-Agent Support
+
+Skills are compatible with multiple AI agents. The installer can deploy to:
+
+| Agent | Local Path | Global Path |
+|-------|-----------|-------------|
+| **OpenCode** | `.opencode/skills/` | `~/.config/opencode/skills/` |
+| **Claude Code** | `.claude/skills/` | `~/.claude/skills/` |
+| **Codex/Agents** | `.agents/skills/` | `~/.agents/skills/` |
+
+Use `--all` to install to all detected agent directories, or specify with `--agents`:
+
+```bash
+# Install to OpenCode and Claude Code globally
+npx opencode-skills-install --global --agents opencode,claude
+
+# Install to all detected directories
+npx opencode-skills-install --all --symlink
+```
 
 ## Included Skills
 
 ### Flutter
 
-- `flutter-clean-arch-architect`
-  Designs and refactors Flutter features using strict Clean Architecture with `domain`, `infrastructure`, and `presentation` layers, manual Riverpod dependency injection, offline-first repositories, and Isar-friendly entities.
+- **`flutter-clean-arch-architect`**
+  Design, scaffold, refactor, or audit Flutter code using Clean Architecture with `domain`, `infrastructure`, and `presentation` layers, manual Riverpod dependency injection, and Isar-friendly entities.
 
-- `flutter-init-project`
-  Bootstraps a Flutter project into a production-ready baseline with Clean Architecture scaffolding, manual Riverpod, GoRouter, Material 3, and reusable bootstrap assets.
+- **`flutter-init-project`**
+  Bootstrap a Flutter project into a production-ready baseline with Clean Architecture scaffolding, manual Riverpod, GoRouter, Material 3, and reusable bootstrap assets.
 
-- `flutter-material3-uiux-expert`
-  Focuses on adaptive Flutter UI implementation with Material Design 3, token-driven styling, responsive layouts, accessibility constraints, and UI auditing support.
+- **`flutter-material3-uiux-expert`**
+  Design and implement Flutter interfaces using Material Design 3 with token-driven styling, responsive layouts, accessibility constraints, and UI auditing support.
 
-- `flutter-riverpod-expert`
-  Covers modern Riverpod usage, migration from legacy patterns, notifier-based state management, dependency injection, rebuild optimization, and advanced Riverpod features.
+- **`flutter-riverpod-expert`**
+  Modern Riverpod state management, migration from legacy patterns, notifier-based state, dependency injection, rebuild optimization, and advanced features.
 
 ### Odoo
 
-- `odoo-modules-creator`
-  Creates and extends Odoo 18 addons using the ORM, views, manifests, security, controllers, wizards, reports, and safe modular extension patterns.
+- **`odoo-modules-creator`**
+  Create and extend Odoo 18 addons using the ORM, XML views, manifests, security, controllers, wizards, reports, and modular extension patterns.
+
+## Usage
+
+After installation, restart your AI agent. The skills will be automatically available:
+
+```
+/opencode
+> skill flutter-clean-arch-architect
+```
+
+Or ask the agent to use a skill directly:
+
+```
+Create a new authentication module using the flutter-clean-arch-architect skill
+```
+
+## CLI Reference
+
+```
+npx opencode-skills-install [options]
+
+Options:
+  --global          Install to global directories
+  --local           Install to current project directory
+  --symlink         Use symlinks instead of copying
+  --copy            Force copy mode (default)
+  --all             Install to all detected agent directories
+  --agents <list>   Comma-separated: opencode,claude,agents
+  --help            Show help
+
+Examples:
+  npx opencode-skills-install --global --symlink
+  npx opencode-skills-install --local --agents opencode,claude
+  npx opencode-skills-install --all --copy
+```
 
 ## Repository Structure
 
-Each skill follows the same high-level layout:
+Each skill follows the OpenCode skill specification:
 
 ```text
 skill-name/
-├── SKILL.md
-├── agents/
+├── SKILL.md              # Main skill definition with YAML frontmatter
+├── agents/               # Agent-specific configurations
 │   └── openai.yaml
-├── references/
-│   ├── core/
-│   └── examples/
-├── assets/        # optional
-└── scripts/       # optional
+├── references/           # Detailed reference documentation
+│   ├── core/             # Core architecture rules and constraints
+│   └── examples/         # Example implementations
+├── assets/               # Templates and boilerplate (optional)
+└── scripts/              # Helper scripts (optional)
 ```
 
 ## Design Principles
 
-These skills were built with a few strong principles in mind:
+- Preserve high-signal technical guidance
+- Prefer explicit workflows over vague prompting
+- Keep architecture and implementation rules enforceable
+- Separate core instructions from detailed references
+- Keep reusable templates and scripts close to the skill
+- Optimize for real execution, not just description
 
-- preserve high-signal technical guidance
-- prefer explicit workflows over vague prompting
-- keep architecture and implementation rules enforceable
-- separate core instructions from detailed references
-- keep reusable templates and scripts close to the skill that needs them
-- optimize for real execution, not just description
+## Publishing to npm
 
-## Notes
+To publish a new version:
 
-- The skills are intentionally opinionated.
-- The architecture and conventions reflect my own standards rather than a generic or framework-neutral style.
-- The repository is organized for maintainability and direct reuse in Codex-compatible skill environments.
+```bash
+# Update version
+npm version patch  # or minor, major
 
-## GitHub Repository Metadata
+# Publish
+npm publish
+```
 
-Use the following values in the GitHub repository settings to make the project easier to find and understand:
+## License
 
-- Description: `Custom Codex skills for Flutter, Riverpod, Material 3, and Odoo, structured from real-world project patterns.`
-- Website: leave empty unless you publish a separate docs site.
-- Topics:
-  - `codex`
-  - `skills`
-  - `flutter`
-  - `riverpod`
-  - `material-design-3`
-  - `odoo`
-  - `ai`
-  - `developer-tools`
-  - `open-source`
-
-These topics are intentionally broad enough to describe the repository without exposing private project details.
+MIT
 
 ---
 

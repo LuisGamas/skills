@@ -1,0 +1,11 @@
+.git
+.github
+.vscode
+.idea
+*.log
+.DS_Store
+Thumbs.db
+_scripts/
+.opencode/
+.claude/
+.agents/

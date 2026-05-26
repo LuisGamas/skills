@@ -1,0 +1,33 @@
+{
+  "name": "flutter-init-project-skill",
+  "version": "0.1.0",
+  "description": "OpenCode skill to bootstrap Flutter projects: Clean Architecture, Riverpod, GoRouter, Material 3, shared services",
+  "main": "SKILL.md",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "references/",
+    "assets/",
+    "scripts/"
+  ],
+  "keywords": [
+    "opencode",
+    "skill",
+    "flutter",
+    "bootstrap",
+    "riverpod",
+    "gorouter",
+    "material-3",
+    "ai-agent"
+  ],
+  "author": "Luis Gamas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGamas/skills.git",
+    "directory": "flutter-init-project"
+  }
+}

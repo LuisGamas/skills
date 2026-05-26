@@ -1,0 +1,31 @@
+{
+  "name": "flutter-clean-arch-architect-skill",
+  "version": "0.1.0",
+  "description": "OpenCode skill for Flutter Clean Architecture: domain/infrastructure/presentation layers, manual Riverpod DI, Isar entities, no usecase layer",
+  "main": "SKILL.md",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "references/",
+    "scripts/"
+  ],
+  "keywords": [
+    "opencode",
+    "skill",
+    "flutter",
+    "clean-architecture",
+    "riverpod",
+    "isar",
+    "ai-agent"
+  ],
+  "author": "Luis Gamas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGamas/skills.git",
+    "directory": "flutter-clean-arch-architect"
+  }
+}

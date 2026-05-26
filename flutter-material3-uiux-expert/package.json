@@ -1,0 +1,33 @@
+{
+  "name": "flutter-material3-uiux-expert-skill",
+  "version": "0.1.0",
+  "description": "OpenCode skill for Material Design 3 Flutter UI: design tokens, expressive surfaces, glassmorphism, responsive layouts",
+  "main": "SKILL.md",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "references/",
+    "scripts/",
+    "assets/"
+  ],
+  "keywords": [
+    "opencode",
+    "skill",
+    "flutter",
+    "material-design-3",
+    "ui",
+    "ux",
+    "responsive",
+    "ai-agent"
+  ],
+  "author": "Luis Gamas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGamas/skills.git",
+    "directory": "flutter-material3-uiux-expert"
+  }
+}

@@ -1,5 +1,5 @@
 ---
-name: flutter-material3-uiux-expert
+name: flutter-m3-uiux
 description: >-
   Design, implement, migrate, or review Flutter interfaces using Material
   Design 3 in the style shown by this repository's real Flutter projects:

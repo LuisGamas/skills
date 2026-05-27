@@ -1,7 +1,7 @@
 interface:
   display_name: "Flutter Material 3 UI/UX Expert"
   short_description: "Build adaptive Flutter Material 3 interfaces"
-  default_prompt: "Use $flutter-material3-uiux-expert to implement or review this Flutter UI with Material 3, responsive layouts, and token-driven styling."
+  default_prompt: "Use $flutter-m3-uiux to implement or review this Flutter UI with Material 3, responsive layouts, and token-driven styling."
 
 policy:
   allow_implicit_invocation: true

@@ -1,5 +1,5 @@
 ---
-name: flutter-clean-arch-architect
+name: flutter-clean-architect
 description: >-
   Design, scaffold, refactor, or audit Flutter code using a Clean Architecture
   aligned with this repository's real project style: `domain`,

@@ -38,7 +38,7 @@ npx skills add https://github.com/LuisGamas/skills/tree/main/flutter-init-projec
 ```
 
 ```bash
-npx skills add https://github.com/LuisGamas/skills/tree/main/flutter-material3-uiux-expert
+npx skills add https://github.com/LuisGamas/skills/tree/main/flutter-m3-uiux
 ```
 
 ```bash
@@ -57,7 +57,7 @@ npx skills add https://github.com/LuisGamas/skills/tree/main/odoo-modules-creato
 |-------|-------------|
 | **flutter-clean-architect** | Design, scaffold, refactor, or audit Flutter code using Clean Architecture with `domain`, `infrastructure`, and `presentation` layers, manual Riverpod dependency injection, and Isar-friendly entities. |
 | **flutter-init-project** | Bootstrap a Flutter project into a production-ready baseline with Clean Architecture scaffolding, manual Riverpod, GoRouter, Material 3, and reusable bootstrap assets. |
-| **flutter-material3-uiux-expert** | Design and implement Flutter interfaces using Material Design 3 with token-driven styling, responsive layouts, accessibility constraints, and UI auditing support. |
+| **flutter-m3-uiux** | Design and implement Flutter interfaces using Material Design 3 with token-driven styling, responsive layouts, accessibility constraints, and UI auditing support. |
 | **flutter-riverpod-expert** | Modern Riverpod state management, migration from legacy patterns, notifier-based state, dependency injection, rebuild optimization, and advanced features. |
 
 ### Odoo
